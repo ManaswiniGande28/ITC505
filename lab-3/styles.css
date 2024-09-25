@@ -1,0 +1,53 @@
+
+/* Apply Babylonica font globally */
+body {
+    font-family: 'Babylonica', cursive;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Heading 1 (Main Title) styles */
+h1 {
+    font-size: 48px;
+    color: darkblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Heading 2 styles (Subheadings) */
+h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 20px;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+    font-family: 'Babylonica', cursive;
+}
+
+/* List styles */
+ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Styling the last updated date */
+footer p {
+    margin: 0;
+}
