@@ -1,0 +1,73 @@
+/* General styles for the body */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: lightblue; /* Body background color */
+    color: #333333;
+    margin: 0;
+    padding: 2rem; /* Applying 2rem padding to the body */
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 2rem;
+    color:crimson;
+    
+}
+
+/* Specific Heading Colors */
+h2.abstract-heading {
+    color: royalblue; /* Color for the Abstract heading */
+    border-bottom: 2px solid black;
+}
+
+h2.html-css-webgl-heading {
+    color: orange; /* Color for the HTML5, CSS3, AND WebGL heading */
+    border-bottom: 2px solid black;
+}
+
+h3.resolution-bitmaps-heading {
+    color: brown; /* Color for the Resolution-dependent Bitmaps heading */
+    border-bottom: 2px solid black;
+}
+
+h2.analysis-heading {
+    color: deepskyblue; /* Color for the Analysis heading */
+    border-bottom: 2px solid black;
+}
+
+h2.conclusions-heading {
+    color: pink; /* Color for the Conclusions and Future Work heading */
+    border-bottom: 2px solid black;
+}
+
+h2.addendum-heading {
+    color: red; /* Color for the Addendum heading */
+    border-bottom: 2px solid black;
+}
+
+/* Article section styling */
+article {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    border: 2px solid #ccc
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: darkgreen;
+    font-size: 0.9em;
+}
+
+/* Additional styling for the code elements */
+code {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
