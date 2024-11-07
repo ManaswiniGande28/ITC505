@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page with JavaScript Templates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Dynamic Page Serving - ITC505 Lab 6</h1>
+    </header>
+
+    <!-- Navigation sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><a href="#" id="aboutLink">About</a></li>
+            <li><a href="#" id="servicesLink">Services</a></li>
+            <li><a href="#" id="contactLink">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+        <div id="contentArea">
+            <h2>Welcome to the Home Page</h2>
+            <p>This is the initial content dynamically served by JavaScript.</p>
+        </div>
+    </main>
+
+    <!-- Advertisement section -->
+    <aside>
+        <a href="https://www.amazon.com/" target="_blank">
+            <img src="advertisement.jpg" alt="Advertisement" style="width: 100%;">
+        </a>
+    </aside>
+
+    <!-- Footer section -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>Addendum: This page dynamically updates its content based on user interaction, mimicking a back-end serving system using JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        var lastMod = document.lastModified;
+        document.getElementById('lastModified').textContent = lastMod;
+    </script>
+</body>
+</html>
