@@ -10,7 +10,7 @@ const story = {
         text: "You find a mysterious cave. Do you enter?",
         choices: ["Enter the cave", "Leave the cave"],
         consequence: ["enter", "leave"],
-        image: cave.jpg"
+        image: "cave.jpg"
     },
     wait: {
         text: "You sit down and wait. A mysterious figure approaches. Do you talk to them?",
