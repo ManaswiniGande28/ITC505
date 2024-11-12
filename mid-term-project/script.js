@@ -11,37 +11,37 @@ const story = {
         text: "You find a mysterious cave. Do you enter?",
         choices: ["Enter the cave", "Leave the cave"],
         consequence: ["enter", "leave"],
-        image: "file:///C:/Users/mg3747/Downloads/cave.jpg"
+        image: "cave.jpg"
     },
     wait: {
         text: "You sit down and wait. A mysterious figure approaches. Do you talk to them?",
         choices: ["Talk to the figure", "Run away"],
         consequence: ["talk", "run"],
-        image:"file:///C:/Users/mg3747/Downloads/figure.jpg"
+        image:"figure.jpg"
     },
     enter: {
         text: "You enter the cave and find treasure! You have won the game.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/treasure.jpg"
+        image: "treasure.jpg"
     },
     leave: {
         text: "You leave the cave and wander aimlessly, eventually finding your way out. The game ends.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/exit.jpg"
+        image: "exit.jpg"
     },
     talk: {
         text: "The figure introduces themselves as a guide. They lead you to safety. You have won!",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/safety.jpg"
+        image: "safety.jpg"
     },
     run: {
         text: "You run away, but the figure catches up to you. Unfortunately, the game ends.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/caught.jpg"
+        image: "caught.jpg"
     }
 };
 
