@@ -4,7 +4,7 @@ const story = {
         text: "You wake up in a dark forest. What do you do?",
         choices: ["Explore the forest", "Sit and wait for help"],
         consequence: ["explore", "wait"],
-        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/forest.jpg?raw=true
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/Forest.jpg?raw=true
 
     },
     explore: {
