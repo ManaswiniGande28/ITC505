@@ -5,6 +5,7 @@ const story = {
         choices: ["Explore the forest", "Sit and wait for help"],
         consequence: ["explore", "wait"],
         image: "forest.JPG" 
+    },
     explore: {
         text: "You find a mysterious cave. Do you enter?",
         choices: ["Enter the cave", "Leave the cave"],
