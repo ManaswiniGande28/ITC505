@@ -4,43 +4,46 @@ const story = {
         text: "You wake up in a dark forest. What do you do?",
         choices: ["Explore the forest", "Sit and wait for help"],
         consequence: ["explore", "wait"],
-        image: "file:///C:/Users/mg3747/Downloads/forest.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/forest.jpg?raw=true
+
     },
     explore: {
         text: "You find a mysterious cave. Do you enter?",
         choices: ["Enter the cave", "Leave the cave"],
         consequence: ["enter", "leave"],
-        image: "file:///C:/Users/mg3747/Downloads/cave.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/cave.jpg?raw=true
+
     },
     wait: {
         text: "You sit down and wait. A mysterious figure approaches. Do you talk to them?",
         choices: ["Talk to the figure", "Run away"],
         consequence: ["talk", "run"],
-        image:"file:///C:/Users/mg3747/Downloads/figure.jpg"
+        image:https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/figure.jpg?raw=true
+
     },
     enter: {
         text: "You enter the cave and find treasure! You have won the game.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/treasure.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/treasure.jpg?raw=true
     },
     leave: {
         text: "You leave the cave and wander aimlessly, eventually finding your way out. The game ends.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/exit.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/exit.jpgexit.?raw=true
     },
     talk: {
         text: "The figure introduces themselves as a guide. They lead you to safety. You have won!",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/safety.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/safety.jpgexit.?raw=true
     },
     run: {
         text: "You run away, but the figure catches up to you. Unfortunately, the game ends.",
         choices: [],
         consequence: [],
-        image: "file:///C:/Users/mg3747/Downloads/caught.jpg"
+        image: https://github.com/[ManaswiniGande28]/[ITC505/mid-term-project/script.js]/blob/main/assets/images/caught.jpgexit.?raw=true
     }
 };
 
