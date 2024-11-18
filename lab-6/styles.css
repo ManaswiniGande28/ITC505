@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light grayish background */
+    line-height: 1.5;
+    color: #333; /* Dark text for readability */
+}
+
+/* Container with Holy Grail Grid Layout */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "menu content ad"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #A8D0E6; /* Light Blue background */
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Menu Sidebar */
+.menu {
+    grid-area: menu;
+    background-color: #FFB6C1; /* Light Pink background */
+    padding: 15px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #000080; /* Dark blue on hover */
+}
+
+/* Main Content Area */
+.content {
+    grid-area: content;
+    background-color: #FFFACD; /* Light Yellow background */
+    padding: 20px;
+    color: #333;
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+/* Advertisement Section */
+.ad {
+    grid-area: ad;
+    text-align: center;
+    padding: 15px;
+}
+
+.ad img {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #D3D3D3; /* Light Gray background */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* Change color of Last Updated text */
+.footer p:first-child {
+    color: #4A90E2; /* Light Blue color for "Last updated" */
+}
