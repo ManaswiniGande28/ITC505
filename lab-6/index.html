@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC505 Lab 6 - Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Welcome to the Holy Grail Layout</h1>
+        </header>
+
+        <!-- Menu Side-Bar -->
+        <nav class="menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>Bubble Sort Implementation</h2>
+            <p>Enter numbers separated by commas, and click "Sort" to see them sorted.</p>
+            <input type="text" id="numberInput" placeholder="e.g., 5,3,8,1,2">
+            <button id="sortButton">Sort</button>
+            <p>Sorted Array: <span id="sortedOutput"></span></p>
+        </main>
+
+        <!-- Advertisement Section with Local and Amazon Images -->
+        <aside class="ad">
+            <!-- Local Image Display -->
+            <a href="https://www.amazon.com/s?k=cups&crid=3KLFMSHILH7TZ&sprefix=cups%2Caps%2C122&ref=nb_sb_noss_1" target="_blank">
+                <img src="file:///C:/Users/mg3747/Downloads/cup%20image.jpg" 
+                     alt="Cup Image" 
+                     style="width: 100%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+            </a>
+            <p style="text-align:center;">Cup</p>
+        </aside>
+
+        
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Last updated: <span id="lastModified"></span></p>
+            <p>Addendum: This page dynamically updates its content based
+                on user interaction, mimicking a back-end serving system using
+                JavaScript.The problem I solved in this project was implementing a bubble sort algorithm using JavaScript. The goal was to allow users to input a series of numbers and sort them in ascending order when a "Sort" button was clicked. To achieve this, I wrote a simple bubble sort function that iterates through the input numbers, compares them, and swaps them if necessary.his is repeated until the array is fully sorted. During development, I encountered difficulties with capturing the user input properly and ensuring that the numbers were sorted correctly. I initially faced issues when the input was not being parsed into numbers, as the default behavior would treat the input as a string. To solve this, I used JavaScript's `split()` method to separate the input by commas and `parseInt()` to convert each value into an integer. In addition to the sorting functionality, the page layout uses CSS Grid to create the Holy Grail layout, which is composed of a header, a menu sidebar, main content, an advertisement section, and a footer. The advertisement section includes a clickable image that leads to an Amazon page for the product. This project helped me practice both JavaScript and CSS Grid, reinforcing my understanding of both front-end programming and layout techniques.</p>
+            </section>
+    
+            <!-- Footer --> 
+                
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
 
