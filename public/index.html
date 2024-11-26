@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Lib Form</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and overall layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header style */
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form container */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Form label */
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        /* Form input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Submit button */
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Result container */
+        .result {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        /* Footer style */
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Last updated text */
+        #lastModified {
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fill in the Blanks for the Mad Lib!</h1>
+    <form id="madLibForm">
+        <label for="adjective">Adjective:</label>
+        <input type="text" id="adjective" name="adjective" required><br>
+
+        <label for="pluralNoun">Plural Noun:</label>
+        <input type="text" id="pluralNoun" name="pluralNoun" required><br>
+
+        <label for="verb">Verb:</label>
+        <input type="text" id="verb" name="verb" required><br>
+
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place" required><br>
+
+        <label for="noun">Noun:</label>
+        <input type="text" id="noun" name="noun" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="madLibResult" class="result" style="display:none;">
+        <h2>Your Mad Lib:</h2>
+        <p id="madLibText"></p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Show the last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+
+        // Handle form submission
+        document.getElementById('madLibForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form from submitting normally
+
+            // Get form values
+            const adjective = document.getElementById('adjective').value;
+            const pluralNoun = document.getElementById('pluralNoun').value;
+            const verb = document.getElementById('verb').value;
+            const place = document.getElementById('place').value;
+            const noun = document.getElementById('noun').value;
+
+            // Check if any field is empty
+            if (!adjective || !pluralNoun || !verb || !place || !noun) {
+                alert('Please fill out all fields!');
+                return;
+            }
+
+            // Create the mad lib
+            const madLibText = `
+                Once upon a time, a ${adjective} ${pluralNoun} decided to ${verb} in the ${place}. 
+                It was a ${adjective} day, and they found a ${noun} along the way.
+            `;
+
+            // Display the result and hide the form
+            document.getElementById('madLibText').textContent = madLibText;
+            document.getElementById('madLibResult').style.display = 'block';
+            document.getElementById('madLibForm').style.display = 'none';
+        });
+
+        // Go back to the form
+        function goBack() {
+            document.getElementById('madLibResult').style.display = 'none';
+            document.getElementById('madLibForm').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
