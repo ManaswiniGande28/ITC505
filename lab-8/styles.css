@@ -1,74 +1,141 @@
-/* General reset for body */
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Background and body styling */
+/* Body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1f8efd, #ff9d9d); /* Soft gradient background */
-    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9; /* Light green background */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-/* Styling for the form container */
-form {
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
-}
-
-/* Heading styling */
+/* Title */
 h2 {
-    font-size: 30px;
-    color: #333;
+    font-size: 28px;
+    color: #4CAF50; /* Green color */
+    text-align: center;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* Input fields styling */
+/* Form container */
+#registration-form {
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the labels */
+label {
+    font-size: 16px;
+    color: #333;  /* Dark color for labels */
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Input field styling */
 input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 15px;
-    margin: 12px 0;
-    border: 2px solid #ddd;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #f9f9f9;
-    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    transition: all 0.3s ease;
 }
 
-/* Focus effect for input fields */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #1f8efd;
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(31, 143, 253, 0.4); /* Glowing border effect */
+/* Apply colors to different fields */
+input[type="text"]:focus, /* First and Last Name */
+input[type="email"]:focus, /* Email */
+input[type="password"]:focus {  /* Password */
+    border-color: #4CAF50;  /* Green focus for inputs */
     outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
-/* Submit button styling */
-input[type="submit"] {
-    background-color: #1f8efd;
-    color: white;
-    padding: 15px 20px;
+/* Specific input field border color */
+input[type="text"] {
+    border-color: #4CAF50;  /* Green border for First and Last Name */
+}
+
+input[type="email"] {
+    border-color: #2196F3; /* Blue border for email */
+}
+
+input[type="password"] {
+    border-color: #FF9800; /* Orange border for password */
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease;
 }
 
-input[t
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error messages */
+.error-message {
+    color: #d8000c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Alert box for validation errors */
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    #registration-form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Smooth transition for form interactions */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    transition: all 0.3s ease;
+}
