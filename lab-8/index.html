@@ -3,90 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">  <!-- Include your CSS file here -->
+    <script src="script.js" defer></script>  <!-- Include your JS file here -->
 </head>
 <body>
-
-    <form id="registration-form">
-        <h2>Sign Up</h2>
-        
+    <form id="registration-form" action="#">
         <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        <input type="text" id="first-name" name="first-name"><br><br>
 
         <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+        <input type="text" id="last-name" name="last-name"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="email"><br><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <input type="password" id="password" name="password"><br><br>
 
         <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        <input type="password" id="confirm-password" name="confirm-password"><br><br>
 
-        <input type="submit" value="Submit">
-        
-        <!-- Error message container -->
-        <div id="error-message" class="error"></div>
-        
-        <!-- Success message container -->
-        <div id="success-message" class="success"></div>
+        <button type="submit">Submit</button>
     </form>
-
-    <script>
-        // Getting references to the form and input elements
-        const form = document.getElementById('registration-form');
-        const firstName = document.getElementById('first-name');
-        const lastName = document.getElementById('last-name');
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const confirmPassword = document.getElementById('confirm-password');
-        const errorMessage = document.getElementById('error-message');
-        const successMessage = document.getElementById('success-message');
-
-        // Form submit event listener
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form from submitting
-
-            // Reset previous error and success messages
-            errorMessage.innerHTML = '';
-            successMessage.innerHTML = '';
-
-            let errorMessages = [];
-
-            // Check if any of the fields are empty
-            if (firstName.value.trim() === '' || lastName.value.trim() === '' || email.value.trim() === '' || password.value.trim() === '' || confirmPassword.value.trim() === '') {
-                errorMessages.push('All fields are required.');
-            }
-
-            // Check email validity using regular expression
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailRegex.test(email.value)) {
-                errorMessages.push('Please enter a valid email address.');
-            }
-
-            // Password validation: check for at least 10 characters, one number, and one special character '@'
-            const passwordRegex = /^(?=.*\d)(?=.*[@])[A-Za-z\d@]{10,}$/;
-            if (!passwordRegex.test(password.value)) {
-                errorMessages.push('Password must be at least 10 characters long, contain at least one number and one special character (@).');
-            }
-
-            // Check if passwords match
-            if (password.value !== confirmPassword.value) {
-                errorMessages.push('Passwords do not match.');
-            }
-
-            // If there are errors, display them
-            if (errorMessages.length > 0) {
-                errorMessage.innerHTML = errorMessages.join('<br>');
-            } else {
-                // If no errors, show success message
-                successMessage.innerHTML = 'Form submitted successfully!';
-            }
-        });
-    </script>
-
 </body>
 </html>
