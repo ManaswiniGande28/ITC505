@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lights Out</h1>
+    <div class="stats">
+        <p id="moves">Moves: 0</p>
+        <p id="targetMoves">Target Moves: 20</p>
+        <p id="time">Time: 0s</p>
+        <p id="targetTime">Target Time: 60s</p>
+    </div>
+    <div id="board"></div>
+
+    <!-- Add footer with the last updated date -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+
+    <!-- Add the game script -->
+    <script src="script.js"></script>
+
+    <!-- Add Process and Creative Choices -->
+    <section id="process">
+        <h2>Process and Creative Choices</h2>
+        <p>
+            The goal of this project was to create a working, playable version of the Lights Out game using JavaScript. The main components I needed to focus on were:
+        </p>
+        <ul>
+            <li><strong>Game Initialization:</strong> The board needed to be initialized randomly but in a solvable state. The player should be able to toggle lights (squares), and each click would affect that square and its neighbors (up, down, left, right). The player needs to track the number of moves made and how long they've been playing.</li>
+            <li><strong>Tracking Progress:</strong> I added two features for the player to track their progress: Moves Counter and Timer. These features help keep the game engaging by encouraging players to complete the puzzle with fewer moves and in less time.</li>
+            <li><strong>Winning Condition:</strong> I implemented a check for when all squares are toggled off (black). Once this happens, the game checks if the player has beaten their target move count and time limit. If both conditions are satisfied, the player gets a "You win!" message; otherwise, the player gets feedback that encourages them to improve.</li>
+            <li><strong>Target Values:</strong> I set a target number of moves (20) and target time (60 seconds) as the baseline for the player to try to beat.</li>
+        </ul>
+
+        <h3>Challenges Faced and Solutions</h3>
+        <ul>
+            <li><strong>Randomizing the Board:</strong> Ensuring a solvable configuration for the board was a challenge. I solved it by starting with an all-white grid and then randomly toggling squares, ensuring a solvable configuration.</li>
+            <li><strong>Timer and Move Counter:</strong> Managing the synchronization of these elements was a challenge. However, I ensured that they were properly updated with each player action, allowing for smooth progress tracking.</li>
+            <li><strong>Responsive Design:</strong> To ensure that the game works across all screen sizes, I used flexible layouts with CSS grid for the game board. This ensures the game stays usable and visually appealing on any device.</li>
+            <li><strong>Target Values:</strong> Determining the right target values required some trial and error. I set target values based on game difficulty, ensuring a balance between fun and challenge.</li>
+        </ul>
+
+        <h3>Insights Gained</h3>
+        <ul>
+            <li><strong>JavaScript's Power:</strong> JavaScript enabled me to build an interactive game with minimal HTML and CSS.</li>
+            <li><strong>Game Design Principles:</strong> Balancing difficulty with player progression is crucial in game design. Adding target values creates additional challenges that encourage players to keep playing to improve their scores.</li>
+        </ul>
+
+        <h3>Final Checklist</h3>
+        <ul>
+            <li>Ensure the page is accessible via the URL (e.g., <strong>http://<yourdomain>/ITC505/final/index.html</strong>)</li>
+            <li>Verify that there are noticeable font changes (font-craziness) as part of the design, and explain how the font was served.</li>
+            <li>Confirm that the footer is included, with the <code>lastModified</code> date appearing before the closing </body> tag.</li>
+            <li>Ensure the process explanation is included as part of the submission.</li>
+        </ul>
+    </section>
+</body>
+</html>
 
